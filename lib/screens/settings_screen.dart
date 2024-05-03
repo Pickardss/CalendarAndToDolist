@@ -5,7 +5,7 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFE4D546),
+        backgroundColor: Color(0xFF2a9d8f),
         title: Text('Settings'),
       ),
       body: ListView(
@@ -26,7 +26,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            title: Text('Event Notifications'),
+            title: Text('Activity Notifications'),
             onTap: () {
               // Etkinlik Bildirimleri sayfasına yönlendirme işlemi
             },

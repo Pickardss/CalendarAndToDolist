@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'signup_screen.dart';
-import 'login_screen.dart';
 import 'account_screen.dart';
+import 'addnew_screen.dart';
 import 'package:todo_app/models/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFFE4D546),
+        backgroundColor: Color(0xFF2a9d8f),
         title: Text(
           'My Calendar',
           style: TextStyle(
@@ -31,8 +30,8 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.account_circle),
+            color: Colors.black,
             onPressed: () {
-              // Account screen'e yönlendirme işlemi
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => AccountScreen()),
@@ -49,69 +48,79 @@ class HomeScreen extends StatelessWidget {
               height: 40,
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: Icon(Icons.search, color: Colors.black),
                   hintText: 'Search',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
                   contentPadding: EdgeInsets.symmetric(vertical: 0),
                 ),
-                onChanged: (value) {
-
-                },
+                onChanged: (value) {},
               ),
             ),
           ),
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(height: 5),
-          // Today title
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Text(
-              'Today',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(height: 5),
-          Card(
-            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            child: ListTile(
-              title: Text(
-                'Team Meeting',
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(height: 5),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                'Today',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              subtitle: Text(
-                '10:00 AM - 11:00 AM',
-              ),
             ),
-          ),
-          Card(
-            margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: ListTile(
-              title: Text(
-                'Lunch with Sarah',
-                style: TextStyle(
-                  fontSize: 16,
+            SizedBox(height: 5),
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              child: ListTile(
+                title: Text(
+                  'Team Meeting',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                subtitle: Text(
+                  '10:00 AM - 11:00 AM',
                 ),
               ),
-              subtitle: Text(
-                '12:30 PM - 1:30 PM',
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: ListTile(
+                title: Text(
+                  'Lunch with Sarah',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                subtitle: Text(
+                  '12:30 PM - 1:30 PM',
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xFFE4D546),
         onPressed: () {
-          // Yeni etkinlik oluşturma işlemi
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddNewScreen()),
+          );
         },
         child: Icon(Icons.add),
       ),

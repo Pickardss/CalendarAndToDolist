@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'accountsettings_screen.dart';
 
 class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFE4D546),
+        backgroundColor: Color(0xFF2a9d8f),
         title: Text('Account'),
       ),
       body: Padding(
@@ -75,20 +76,25 @@ class AccountScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             // Account Settings
-            Card(
-              color: Colors.black,
-              child: ListTile(
-                leading: Icon(
-                  Icons.settings,
-                  color: Colors.white,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AccountSettingsScreen()),
+                );
+              },
+              child: Card(
+                color: Colors.black,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.settings,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'Account Settings',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
                 ),
-                title: Text(
-                  'Account Settings', // Hesap Ayarları başlığı
-                  style: TextStyle(fontSize: 18, color: Colors.white),
-                ),
-                onTap: () {
-                  // Hesap ayarları sayfasına yönlendirme işlemi
-                },
               ),
             ),
           ],

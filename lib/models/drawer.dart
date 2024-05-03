@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Color(0xFFE4D546),
+              color: Color(0xFF2a9d8f),
             ),
             child: Text(
               'Menu',
@@ -42,28 +42,6 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Help and Feedback'),
             onTap: () {
               // Geri bildirim sayfasına gitme işlemi
-            },
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(
-              Icons.exit_to_app_outlined,
-              color: Colors.red,
-            ),
-            title: Text(
-              'Log Out',
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {
-              // Çıkış işlemi
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => StartScreen()),
-              );
             },
           ),
         ],

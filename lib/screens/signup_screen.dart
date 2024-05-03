@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
-import 'start_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE4D546),
+      backgroundColor: Color(0xFF2a9d8f),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0, // Gölge yok

@@ -6,7 +6,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE4D546),
+      backgroundColor: Color(0xFF2a9d8f),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
