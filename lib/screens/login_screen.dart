@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'forgot_password_screen.dart';
+import 'start_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -13,7 +14,10 @@ class LoginScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => StartScreen()),
+            );
           },
         ),
       ),

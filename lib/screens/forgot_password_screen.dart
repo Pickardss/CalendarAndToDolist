@@ -50,7 +50,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Burada mail gönderme işlemleri gerçekleştirilmelidir
+                  // Burada mail gönderme işlemleri
                 },
                 child: Text("Send Mail"),
               ),

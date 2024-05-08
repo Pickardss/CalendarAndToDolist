@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF2a9d8f),
         title: Text(
           'My Calendar',
           style: TextStyle(
@@ -115,7 +114,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFFE4D546),
+        backgroundColor: Color(0xFF2a9d8f),
         onPressed: () {
           Navigator.push(
             context,

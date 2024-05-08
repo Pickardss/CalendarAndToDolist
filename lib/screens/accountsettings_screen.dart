@@ -45,7 +45,6 @@ class AccountSettingsScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Çıkış işlemi
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => LoginScreen()),

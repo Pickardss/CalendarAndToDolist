@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'notificationsettings_screen.dart';
+import 'themes_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF2a9d8f),
         title: Text('Settings'),
       ),
       body: ListView(
@@ -14,28 +15,20 @@ class SettingsScreen extends StatelessWidget {
           ListTile(
             title: Text('Themes'),
             onTap: () {
-              // Tema seçeneklerinin bulunduğu sayfaya yönlendirme işlemi
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ThemeSelectionScreen()),
+              );
             },
           ),
           Divider(),
           ListTile(
             title: Text('Notification Settings'),
             onTap: () {
-              // Bildirim Ayarları sayfasına yönlendirme işlemi
-            },
-          ),
-          Divider(),
-          ListTile(
-            title: Text('Activity Notifications'),
-            onTap: () {
-              // Etkinlik Bildirimleri sayfasına yönlendirme işlemi
-            },
-          ),
-          Divider(),
-          ListTile(
-            title: Text('Backup and Restore'),
-            onTap: () {
-              // Yedekleme ve Geri Yükleme sayfasına yönlendirme işlemi
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NotificationSettingsScreen()),
+              );
             },
           ),
         ],

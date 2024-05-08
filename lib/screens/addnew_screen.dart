@@ -47,7 +47,7 @@ class AddNewScreen extends StatelessWidget {
                       child: Text(value),
                     );
                   }).toList(),
-                  onChanged: (String? value) {}, // Değişen değeri String? olarak alın
+                  onChanged: (String? value) {}, // Değişen değeri String? olarak alma
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Select activity type',
@@ -126,7 +126,7 @@ class AddNewScreen extends StatelessWidget {
                       child: Text(value),
                     );
                   }).toList(),
-                  onChanged: (String? value) {}, // Değişen değeri String? olarak alın
+                  onChanged: (String? value) {}, // Değişen değeri String? olarak alma
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Select activity place',
@@ -138,10 +138,12 @@ class AddNewScreen extends StatelessWidget {
                     // Ekleme işlemi
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xFFE4D546)),
+                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF2a9d8f)),
                   ),
-                  child: Text('Add'),
+                  child: Text(
+                    'Add',
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ],
             ),

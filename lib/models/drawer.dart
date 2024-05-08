@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/start_screen.dart';
 import 'package:todo_app/screens/settings_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -41,7 +40,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             title: Text('Help and Feedback'),
             onTap: () {
-              // Geri bildirim sayfasına gitme işlemi
+
             },
           ),
         ],
