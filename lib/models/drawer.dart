@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/settings_screen.dart';
+import 'package:todo_app/screens/feedback_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -40,7 +41,10 @@ class CustomDrawer extends StatelessWidget {
             ),
             title: Text('Help and Feedback'),
             onTap: () {
-
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HelpAndFeedbackPage()),
+              );
             },
           ),
         ],
