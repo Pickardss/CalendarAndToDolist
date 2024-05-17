@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:date_time_picker/date_time_picker.dart';
+import 'package:flutter/services.dart';
 
 class AddNewScreen extends StatelessWidget {
   @override
@@ -104,9 +105,18 @@ class AddNewScreen extends StatelessWidget {
                 SizedBox(height: 8),
                 TextField(
                   maxLines: 3,
+                  inputFormatters: [LengthLimitingTextInputFormatter(30)], 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Enter description',
+                  ),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  'Maximum 30 characters',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey,
                   ),
                 ),
                 SizedBox(height: 16),
