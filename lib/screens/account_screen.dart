@@ -2,26 +2,28 @@ import 'package:flutter/material.dart';
 import 'accountsettings_screen.dart';
 
 class AccountScreen extends StatelessWidget {
+  const AccountScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF2a9d8f),
-        title: Text('Account'),
+        backgroundColor: const Color(0xFF2a9d8f),
+        title: const Text('Account'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: Icon(
                 Icons.account_circle,
                 size: 100,
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Name: John Doe',
@@ -29,8 +31,8 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Email: johndoe@example.com',
@@ -38,8 +40,8 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Ongoing Tasks: 5',
@@ -47,8 +49,8 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Ongoing Projects: 2',
@@ -56,8 +58,8 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Ongoing Goals: 3',
@@ -65,8 +67,8 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Card(
+            const SizedBox(height: 10),
+            const Card(
               child: ListTile(
                 title: Text(
                   'Ongoing Events: 4',
@@ -74,16 +76,16 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             // Account Settings
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AccountSettingsScreen()),
+                  MaterialPageRoute(builder: (context) => const AccountSettingsScreen()),
                 );
               },
-              child: Card(
+              child: const Card(
                 color: Colors.black,
                 child: ListTile(
                   leading: Icon(

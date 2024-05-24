@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HelpAndFeedbackPage extends StatelessWidget {
+  const HelpAndFeedbackPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Help and Feedback'),
+        title: const Text('Help and Feedback'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -13,35 +15,35 @@ class HelpAndFeedbackPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Title',
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Expanded(
               child: TextFormField(
                 maxLines: null,
                 maxLength: 250,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Feedbacks (max 250 characters)',
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 // Geri bildirimi gönderme işlemi
               },
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                  Color(0xFF2a9d8f),
+                backgroundColor: WidgetStateProperty.all<Color>(
+                  const Color(0xFF2a9d8f),
                 ),
-                foregroundColor: MaterialStateProperty.all<Color>(
+                foregroundColor: WidgetStateProperty.all<Color>(
                   Colors.black,
                 ),
               ),
-              child: Text('Send'),
+              child: const Text('Send'),
             ),
           ],
         ),
@@ -51,7 +53,7 @@ class HelpAndFeedbackPage extends StatelessWidget {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: HelpAndFeedbackPage(),
   ));
 }

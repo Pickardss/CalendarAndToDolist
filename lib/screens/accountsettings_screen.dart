@@ -2,41 +2,43 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/screens/login_screen.dart';
 
 class AccountSettingsScreen extends StatelessWidget {
+  const AccountSettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF2a9d8f),
-        title: Text('Account Settings'),
+        backgroundColor: const Color(0xFF2a9d8f),
+        title: const Text('Account Settings'),
       ),
       body: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           ListTile(
-            title: Text('Edit Name'),
+            title: const Text('Edit Name'),
             onTap: () {
               // Edit Name işlemi
             },
           ),
           ListTile(
-            title: Text('Change Password'),
+            title: const Text('Change Password'),
             onTap: () {
               // Change Password işlemi
             },
           ),
           ListTile(
-            title: Text('Change Email'),
+            title: const Text('Change Email'),
             onTap: () {
               // Change Email işlemi
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.exit_to_app_outlined,
               color: Colors.red,
             ),
-            title: Text(
+            title: const Text(
               'Log out',
               style: TextStyle(
                 color: Colors.red,
@@ -47,7 +49,7 @@ class AccountSettingsScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => LoginScreen()),
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
               );
             },
           ),

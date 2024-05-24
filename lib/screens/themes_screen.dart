@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 
 class ThemeSelectionScreen extends StatelessWidget {
+  const ThemeSelectionScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Theme Selection'),
+        title: const Text('Theme Selection'),
       ),
       body: ListView(
         children: [
           ListTile(
-            title: Text('Dark Mode'),
+            title: const Text('Dark Mode'),
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
+                const SnackBar(
                   content: Text('Dark Mode selected.'),
                 ),
               );
             },
           ),
           ListTile(
-            title: Text('Light Mode'),
+            title: const Text('Light Mode'),
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
+                const SnackBar(
                   content: Text('Light Mode selected.'),
                 ),
               );

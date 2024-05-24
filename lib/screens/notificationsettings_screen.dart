@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NotificationSettingsScreen extends StatefulWidget {
+  const NotificationSettingsScreen({super.key});
+
   @override
   _NotificationSettingsScreenState createState() =>
       _NotificationSettingsScreenState();
@@ -17,12 +19,12 @@ class _NotificationSettingsScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notification Settings'),
+        title: const Text('Notification Settings'),
       ),
       body: ListView(
         children: <Widget>[
           SwitchListTile(
-            title: Text('Enable Notifications'),
+            title: const Text('Enable Notifications'),
             value: _notificationsEnabled,
             onChanged: (value) {
               setState(() {
@@ -31,7 +33,7 @@ class _NotificationSettingsScreenState
             },
           ),
           SwitchListTile(
-            title: Text('Enable Reminders'),
+            title: const Text('Enable Reminders'),
             value: _reminderEnabled,
             onChanged: (value) {
               setState(() {
@@ -40,7 +42,7 @@ class _NotificationSettingsScreenState
             },
           ),
           SwitchListTile(
-            title: Text('Enable Sound'),
+            title: const Text('Enable Sound'),
             value: _soundEnabled,
             onChanged: (value) {
               setState(() {
@@ -49,7 +51,7 @@ class _NotificationSettingsScreenState
             },
           ),
           SwitchListTile(
-            title: Text('Enable Vibration'),
+            title: const Text('Enable Vibration'),
             value: _vibrationEnabled,
             onChanged: (value) {
               setState(() {

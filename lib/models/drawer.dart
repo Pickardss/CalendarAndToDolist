@@ -3,13 +3,15 @@ import 'package:todo_app/screens/settings_screen.dart';
 import 'package:todo_app/screens/feedback_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               color: Color(0xFF2a9d8f),
             ),
@@ -22,28 +24,28 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.settings,
               color: Colors.black,
             ),
-            title: Text('Settings'),
+            title: const Text('Settings'),
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SettingsScreen()),
+                  MaterialPageRoute(builder: (context) => const SettingsScreen()),
               );
             },
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.question_mark,
               color: Colors.black,
             ),
-            title: Text('Help and Feedback'),
+            title: const Text('Help and Feedback'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HelpAndFeedbackPage()),
+                MaterialPageRoute(builder: (context) => const HelpAndFeedbackPage()),
               );
             },
           ),

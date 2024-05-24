@@ -3,31 +3,33 @@ import 'notificationsettings_screen.dart';
 import 'themes_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: const Text('Settings'),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
         children: [
           ListTile(
-            title: Text('Themes'),
+            title: const Text('Themes'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ThemeSelectionScreen()),
+                MaterialPageRoute(builder: (context) => const ThemeSelectionScreen()),
               );
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            title: Text('Notification Settings'),
+            title: const Text('Notification Settings'),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => NotificationSettingsScreen()),
+                MaterialPageRoute(builder: (context) => const NotificationSettingsScreen()),
               );
             },
           ),
